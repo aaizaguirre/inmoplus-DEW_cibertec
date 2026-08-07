@@ -1,5 +1,5 @@
 import React from 'react';
-import logoInmoPlus from '/public/logo-InmoPlus.PNG' 
+import logoInmoPlus from './assets/logo-InmoPlus.PNG' 
 
 function Header(){
 
