@@ -2,15 +2,12 @@
 
 header{
   display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
   align-items: center;
   padding: 0 10px;
 }
 
 #contenedor-logo{
   display: flex;
-  flex-direction: row;
   align-items: center;
 }
 
@@ -26,6 +23,81 @@ header{
 
 #navbar{
   display: flex;
-  flex-direction: row;
   justify-content: space-between;
+}
+
+li{
+  margin: 0 10px;
+}
+
+li a {
+  padding: 8px 12px;
+  border-radius: 8px;
+  transition: all 0.2s ease;
+}
+
+
+li a:hover,
+li a.active {
+  background-color: var(--color-fondo-hover);
+  font-weight: bold;
+}
+/* ---------- HERO ---------- */
+
+.hero {
+  position: relative;
+  height: 50vh;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+}
+
+.hero-imagen {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  filter: brightness(0.65);
+}
+
+.hero-contenido {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.hero-contenido h2 {
+  font-size: 4rem;
+  color: var(--color-fuente-secundaria);
+}
+
+.flecha {
+  position: absolute;
+  top: 50%;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 2rem;
+  background: rgba(255, 255, 255, 0.3);
+  color: white;
+  line-height: 1;
+  transform: translateY(-50%);
+}
+
+.flecha.izquierda {
+  left: 20px;
+}
+
+.flecha.derecha {
+  right: 20px;
+}
+
+.flecha:hover {
+  background: rgba(255, 255, 255, 0.5);
 }
