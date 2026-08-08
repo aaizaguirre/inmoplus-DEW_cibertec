@@ -101,3 +101,33 @@ li a.active {
 .flecha:hover {
   background: rgba(255, 255, 255, 0.5);
 }
+
+/* ---------- SECTION: FILTRO ---------- */
+#contenedor-btns{
+  display: flex;
+  margin: 20px 80px;
+  gap: 30px;
+}
+
+#contenedor-filtros{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 80px;
+}
+
+#select-distritos, #rango-precio input{
+  padding: 10px 15px;
+  border: 1px solid;
+  border-radius: 8px;
+}
+
+#select-distritos{
+  width: 250px;
+}
+
+#rango-precio{
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}

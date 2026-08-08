@@ -1,8 +1,9 @@
 :root{
   --color-fondo: #ffffff;
   --color-fondo-hover: #e0e0e0;
-  --color-fuente-principal: #000000;
+  --color-fuente-principal: #0a2947;
   --color-fuente-secundaria: #ffffff;
+  --color-fondo-boton: #ecf1f8;
 }
 
 * {
@@ -30,3 +31,19 @@ a{
   color: inherit;
 }
 
+button{
+  color: var(--color-fuente-principal);
+  border-radius: 5px;
+  font-size: 1.1rem;
+  background-color: var(--color-fondo-boton);
+  border: var(--color-fondo-boton);
+  width: 100px;
+  height: 40px;
+  transition: all 0.2s ease;
+}
+
+button:hover, button:active{
+  color: var(--color-fuente-secundaria);
+  font-weight: bold;
+  background-color: var(--color-fuente-principal);
+}
