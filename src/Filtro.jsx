@@ -1,7 +1,7 @@
-import React from 'react';
+import { useState } from 'react';
 
 
-function Filtro(){
+function Filtro({onBuscar}){
     const distritos = [
         "Barranco",
         "Jesús María",
@@ -16,16 +16,35 @@ function Filtro(){
         "Surco", 
         "Surquillo",  
     ];
+
+    const [distrito, setDistrito] = useState("");
+    const [precioMin, setPrecioMin] = useState(""); 
+    const [precioMax, setPrecioMax] = useState("");
+
+    const manejarBusqueda = (e) => {
+        e.preventDefault();
+        onBuscar({
+            distrito,
+            precioMin,
+            precioMax
+        });
+    };
+
     return(
-        <form>
+        <form onSubmit = {manejarBusqueda}>
             <div id="contenedor-btns">
-                <button>Alquilar</button>
-                <button>Comprar</button>
+                <button type = "button">Alquilar</button>
+                <button type = "button">Comprar</button>
             </div>
 
             <div id="contenedor-filtros">
-                <select name="distritos" id="select-distritos">
-                    <option value="">Selecciona un distrito</option>
+                <select 
+                name="distritos" 
+                id="select-distritos" 
+                value ={distrito} 
+                onChange={(e) => setDistrito(e.target.value)}>
+                    <option 
+                    value="">Selecciona un distrito</option>
 
                     {distritos.map((distrito) => (
                         <option key={distrito} value={distrito}>
@@ -38,8 +57,10 @@ function Filtro(){
                     <span>S/. </span>
                     <input
                         type="number"
-                        name="precio-min"
-                        placeholder="Precio mínimo"
+                        name="precioMin"
+                        placeholder="Precio mínimo" 
+                        value = {precioMin} 
+                        onChange = {(e) => setPrecioMin(e.target.value)}
                     />
 
                     <span> - </span>
@@ -47,11 +68,13 @@ function Filtro(){
                     <span>S/. </span>
                     <input
                         type="number"
-                        name="precio-max"
-                        placeholder="Precio máximo"
+                        name="precioMax"
+                        placeholder="Precio máximo" 
+                        value = {precioMax}
+                        onChange = {(e) => setPrecioMax(e.target.value)}
                     />
                 </div>
-                <button>Buscar</button>
+                <button type = "submit">Buscar</button>
             </div>
         </form>
     )
