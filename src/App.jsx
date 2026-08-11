@@ -14,12 +14,12 @@ import depSurco1 from './assets/dep-surco1.jpg'
 function App() { 
   const propiedades = [ 
     { id: 1, 
-      titulo: "Av. Circunvalación 148 - Surco, Lima",
-      distrito: "Surco", 
+      titulo: "Calle San Martín Cdra. 8 - Miraflores, Lima",
+      distrito: "Miraflores", 
       estado: "En alquiler", 
-      precio: 6000, 
-      caracteristicas: "120 m2 3 dorm. 2 baños 2 estacionamiento", 
-      imagen: depSurco1 
+      precio: 5100, 
+      caracteristicas: "150 m2 3 dorm. 2 baños estacionamiento", 
+      imagen: depMiraflores1
     }, 
     { 
       id: 2, 
