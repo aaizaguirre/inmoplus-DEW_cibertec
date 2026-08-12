@@ -1,7 +1,8 @@
 import React from 'react';
-import logoInmoPlus from './assets/logo-InmoPlus.PNG' 
+import './Navbar.css';
+import logoInmoPlus from '../assets/logo-InmoPlus.PNG';
 
-function Header(){
+function Navbar(){
 
     return(
         <header>
@@ -22,4 +23,4 @@ function Header(){
     )
 }
 
-export default Header;
+export default Navbar;
