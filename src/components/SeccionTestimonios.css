@@ -1,0 +1,72 @@
+.contenedor-testimonios {
+    max-width: 75%;
+    margin: 50px auto;
+    padding: 40px 30px;
+    border: 1px solid var(--color-fondo-hover);
+    border-radius: 16px;
+    background-color: var(--color-fondo);
+    text-align: center;
+}
+
+.testimonios-titulo h2 {
+    font-size: 2rem;
+    color: var(--color-fuente-principal);
+    margin-bottom: 8px;
+    font-weight: 700;
+}
+
+.testimonios-titulo p {
+    color: var(--color-fuente-principal);
+    font-size: 0.95rem;
+    margin-bottom: 35px;
+}
+
+.grid-testimonios {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    animation: fadeIn 0.6s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0.2;
+        transform: translateY(6px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.card-testimonio {
+    background-color: var(--color-fondo-boton);
+    border: 1px solid var(--color-fondo-boton);
+    border-radius: 12px;
+    padding: 24px;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 200px;
+}
+
+.comentario {
+    color: var(--color-fuente-principal);
+    font-size: 0.95rem;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+.nombre {
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: var(--color-fuente-principal);
+    margin: 0;
+}
+
+.cargo {
+    font-size: 0.85rem;
+    color: var(--color-fuente-principal);
+    font-style: italic;
+}
