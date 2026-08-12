@@ -1,23 +1,12 @@
 import { useState } from 'react';
-import Button from '../src/components/Button'
+import Button from './Button';
+import './SeccionFiltro.css';
+import { distritos } from '../data/propiedades';
 
 
-function Filtro({onBuscar}){
-    const distritos = [
-        "Barranco",
-        "Jesús María",
-        "La Molina",
-        "Lince",
-        "Los Olivos",
-        "Magdalena del Mar",
-        "Miraflores",
-        "Pueblo Libre",
-        "San Isidro",
-        "San Borja",
-        "Surco", 
-        "Surquillo",  
-    ];
-
+function SeccionFiltro({onBuscar}){
+    
+    const [tipoOperacion, setTipoOperacion] = useState("");
     const [distrito, setDistrito] = useState("");
     const [precioMin, setPrecioMin] = useState(""); 
     const [precioMax, setPrecioMax] = useState("");
@@ -25,6 +14,7 @@ function Filtro({onBuscar}){
     const manejarBusqueda = (e) => {
         e.preventDefault();
         onBuscar({
+            tipoOperacion,
             distrito,
             precioMin,
             precioMax
@@ -34,24 +24,32 @@ function Filtro({onBuscar}){
     return(
         <form onSubmit = {manejarBusqueda}>
             <div id="contenedor-btns">
-                <Button texto = "Alquilar"></Button>
-                <Button texto = "Vender"></Button>
+                <Button 
+                    texto = "Alquilar" 
+                    accion = {() => setTipoOperacion("En alquiler")}
+                    className = {tipoOperacion === "En alquiler" ? "activo" : ""}
+                />
+                <Button
+                    texto = "Comprar"
+                    accion = {() => setTipoOperacion("En venta")}
+                    className = {tipoOperacion === "En venta" ? "activo" : ""}
+                />
             </div>
 
             <div id="contenedor-filtros">
                 <select 
-                name="distritos" 
-                id="select-distritos" 
-                value ={distrito} 
-                onChange={(e) => setDistrito(e.target.value)}>
-                    <option 
-                    value="">Selecciona un distrito</option>
+                    name="distritos" 
+                    id="select-distritos" 
+                    value ={distrito} 
+                    onChange={(e) => setDistrito(e.target.value)}>
+                        <option 
+                        value="">Selecciona un distrito</option>
 
-                    {distritos.map((distrito) => (
-                        <option key={distrito} value={distrito}>
-                            {distrito}
-                        </option>
-                    ))}
+                        {distritos.map((distrito) => (
+                            <option key={distrito} value={distrito}>
+                                {distrito}
+                            </option>
+                        ))}
                 </select>
 
                 <div id="rango-precio">
@@ -75,10 +73,13 @@ function Filtro({onBuscar}){
                         onChange = {(e) => setPrecioMax(e.target.value)}
                     />
                 </div>
-                <Button texto = "Buscar" accion = "submit"></Button>
+                <Button 
+                    texto = "Buscar" 
+                    type = "submit"
+                    className = "btn-buscar"/>
             </div>
         </form>
     )
 }
 
-export default Filtro;
+export default SeccionFiltro;

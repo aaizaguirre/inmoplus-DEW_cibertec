@@ -1,10 +1,14 @@
 import React from 'react';
 import './Button.css';
 
-function Button({texto, accion, deshabilitado}){
+function Button({texto, accion, deshabilitado, type = "button", className = ""}){
 
     return(
-        <button onClick = {accion} disabled = {deshabilitado}>
+        <button 
+        type = {type}
+        onClick = {accion} 
+        disabled = {deshabilitado}
+        className = {className}>
             {texto}
         </button>
     )

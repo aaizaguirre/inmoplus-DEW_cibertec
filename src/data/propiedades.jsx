@@ -40,3 +40,7 @@ export const propiedades = [
         imagen: depSurco1 
     } 
 ]; 
+
+export const distritos = [
+    ... new Set(propiedades.map((prop) => prop.distrito))
+].sort();

@@ -11,7 +11,13 @@ button{
     transition: all 0.2s ease;
 }
 
-button:hover, button:active{
+button:hover{
     color: var(--color-fuente-secundaria);
     background-color: var(--color-fuente-principal);
+}
+
+button.activo {
+    color: var(--color-fuente-secundaria);
+    background-color: var(--color-fuente-principal);
+    border-color: var(--color-fuente-principal);
 }
