@@ -1,7 +1,7 @@
 import { useState } from 'react';
-import Button from './Button';
+import Button from '../../components/Button';
 import './SeccionFiltro.css';
-import { distritos } from '../data/propiedades';
+import { distritos } from '../../data/propiedades';
 
 
 function SeccionFiltro({onBuscar}){

@@ -5,10 +5,10 @@ import { propiedades } from '../src/data/propiedades.jsx';
 
 import Navbar from './components/Navbar.jsx'
 import Hero from './components/Hero.jsx'
-import SeccionFiltro from './components/SeccionFiltro.jsx'
-import SeccionNosotros from './components/SeccionNosotros.jsx'
-import SeccionPropiedades from './components/SeccionPropiedades.jsx'
-import Footer from '../src/components/Footer.jsx'
+import SeccionFiltro from './pages/Home/SeccionFiltro.jsx'
+import SeccionNosotros from './pages/Home/SeccionNosotros.jsx'
+import SeccionPropiedades from './pages/Home/SeccionPropiedades.jsx'
+import Footer from './components/Footer.jsx'
 
 function App() { 
   

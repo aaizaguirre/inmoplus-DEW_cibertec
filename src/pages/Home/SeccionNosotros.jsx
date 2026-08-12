@@ -1,6 +1,6 @@
-import Button from './Button';
+import Button from '../../components/Button';
 import './SeccionNosotros.css';
-import equipoInmobiliaria from '../assets/equipo-inmobiliaria.jpg';
+import equipoInmobiliaria from '../../assets/equipo-inmobiliaria.jpg';
 
 function SeccionNosotros(){
 
