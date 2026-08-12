@@ -1,4 +1,6 @@
-import equipoInmobiliaria from './assets/equipo-inmobiliaria.jpg'
+import Button from './Button';
+import './SeccionNosotros.css';
+import equipoInmobiliaria from '../assets/equipo-inmobiliaria.jpg';
 
 function SeccionNosotros(){
 
@@ -8,9 +10,7 @@ function SeccionNosotros(){
                 <h2>Te acompañamos en cada paso</h2>
                 <p>Conoce más sobre nuestro equipo.</p>
                 {/* TODO: ACTUALIZAR ENLACE DEL BUTTON */}
-                <a href="#">
-                    <button id = "btn-nosotros" href>Nosotros -❯</button>
-                </a>
+                <Button texto = "Nosotros"></Button> 
             </div>
             <div id = "contenedor-imagen">
                 <img src={equipoInmobiliaria} alt="Equipo de trabajo de Inmobiliara InmoPlus Perú" />

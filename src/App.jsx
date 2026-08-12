@@ -3,7 +3,7 @@ import './App.css'
 import Navbar from './components/Navbar.jsx'
 import Hero from './components/Hero.jsx'
 import Filtro from './Filtro.jsx'
-import SeccionNosotros from './SeccionNosotros.jsx'
+import SeccionNosotros from './components/SeccionNosotros.jsx'
 import SeccionPropiedades from './SeccionPropiedades.jsx'
 import Footer from '../src/components/Footer.jsx'
 
