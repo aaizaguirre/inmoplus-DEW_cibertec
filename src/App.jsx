@@ -5,7 +5,7 @@ import Hero from './components/Hero.jsx'
 import Filtro from './Filtro.jsx'
 import SeccionNosotros from './SeccionNosotros.jsx'
 import SeccionPropiedades from './SeccionPropiedades.jsx'
-import Footer from './Footer.jsx'
+import Footer from '../src/components/Footer.jsx'
 
 import depMiraflores1 from './assets/dep-miraflores1.jpg'
 import depSanIsidro1 from './assets/dep-san isidro1.jpg'

@@ -1,0 +1,176 @@
+footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    gap: 30px;
+    padding: 30px;
+}
+
+#contenedor-logo-footer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 25%;
+    gap: 10px;
+}
+
+#logo-img-footer {
+    width: 25%;
+    height: auto;
+}
+
+#logo-titulo {
+    margin: 0;
+    font-weight: bold;
+}
+
+#contenedor-direccion {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+#contenedor-direccion h3,
+#contenedor-direccion p {
+    margin: 0;
+}
+
+#contenedor-contacto {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#contenedor-contacto h3 {
+    margin: 0;
+}
+
+#contenedor-contacto a {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 8px;
+    color: var(--color-fuente-principal);
+    text-decoration: none;
+    transition: opacity 0.2s ease;
+}
+
+#contenedor-contacto a:hover {
+    opacity: 0.75;
+}
+
+#contenedor-contacto i {
+    font-size: 1.4em;
+}
+
+.fa-square-whatsapp {
+    color: rgb(99, 230, 190);
+}
+
+.fa-envelope {
+    color: var(--color-fuente-principal);
+}
+
+#contenedor-redes-sociales {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+#contenedor-redes-sociales h3 {
+    margin: 0;
+    text-align: center;
+}
+
+.redes-iconos {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px;
+}
+
+.social-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.1rem;
+    height: 2.1rem;
+    border: 0.125rem solid transparent;
+    border-radius: 50%;
+    color: #fefefe;
+    font-size: 1.25rem;
+    text-decoration: none;
+    transition:
+        transform 0.3s ease,
+        color 0.3s ease,
+        background-color 0.3s ease,
+        border-color 0.3s ease;
+}
+
+.social-button:hover,
+.social-button:focus {
+    transform: rotate(360deg);
+}
+
+.social-button:focus-visible {
+    outline: 2px solid var(--color-fuente-principal);
+    outline-offset: 2px;
+}
+
+.social-button.facebook {
+    background: #3b5998;
+}
+
+.social-button.facebook:hover,
+.social-button.facebook:focus {
+    color: #3b5998;
+    background: #fefefe;
+    border-color: #3b5998;
+}
+
+.social-button.twitter {
+    background: #55acee;
+}
+
+.social-button.twitter:hover,
+.social-button.twitter:focus {
+    color: #55acee;
+    background: #fefefe;
+    border-color: #55acee;
+}
+
+.social-button.tiktok {
+    background: #000000;
+}
+
+.social-button.tiktok:hover,
+.social-button.tiktok:focus {
+    color: #000000;
+    background: #fefefe;
+    border-color: #000000;
+}
+
+.social-button.youtube {
+    background: #bb0000;
+}
+
+.social-button.youtube:hover,
+.social-button.youtube:focus {
+    color: #bb0000;
+    background: #fefefe;
+    border-color: #bb0000;
+}
+
+.social-button.instagram {
+    background: #125688;
+}
+
+.social-button.instagram:hover,
+.social-button.instagram:focus {
+    color: #125688;
+    background: #fefefe;
+    border-color: #125688;
+}
