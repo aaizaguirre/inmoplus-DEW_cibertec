@@ -1,6 +1,11 @@
+form{
+    max-width: 75%;
+    margin: 20px auto;
+}
+
 #contenedor-btns{
     display: flex;
-    margin: 20px 80px;
+    margin-bottom: 40px;
     gap: 30px;
 }
 
