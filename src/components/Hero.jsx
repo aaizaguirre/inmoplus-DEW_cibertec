@@ -1,8 +1,10 @@
 import {useState} from "react";
-import departamento1 from './assets/departamento1.jpg'
-import departamento2 from './assets/departamento2.jpg'
-import departamento3 from './assets/departamento3.jpg'
-import departamento4 from './assets/departamento4.jpg'
+import './Hero.css';
+
+import departamento1 from '../assets/departamento1.jpg'
+import departamento2 from '../assets/departamento2.jpg'
+import departamento3 from '../assets/departamento3.jpg'
+import departamento4 from '../assets/departamento4.jpg'
 
 const imagenes = [departamento1, departamento2, departamento3, departamento4];
 
