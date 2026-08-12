@@ -7,7 +7,7 @@ import Navbar from './components/Navbar.jsx'
 import Hero from './components/Hero.jsx'
 import Filtro from './Filtro.jsx'
 import SeccionNosotros from './components/SeccionNosotros.jsx'
-import SeccionPropiedades from './SeccionPropiedades.jsx'
+import SeccionPropiedades from './components/SeccionPropiedades.jsx'
 import Footer from '../src/components/Footer.jsx'
 
 function App() { 
@@ -16,7 +16,8 @@ function App() {
   const [resultados, setResultados] = useState([]); 
   const buscarPropiedades = (filtros) => { 
     const resultadosFiltrados = propiedades.filter((propiedad) => { 
-      const coincideDistrito = filtros.distrito === "" || 
+      const coincideDistrito = 
+      filtros.distrito === "" || 
       propiedad.distrito === filtros.distrito; 
       
       const coincidePrecioMin = 
