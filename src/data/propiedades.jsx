@@ -10,7 +10,8 @@ export const propiedades = [
         estado: "En alquiler", 
         precio: 5100, 
         caracteristicas: "150 m2 3 dorm. 2 baños estacionamiento", 
-        imagen: depMiraflores1
+        imagen: depMiraflores1,
+        destacado: true
     }, 
     { 
         id: 2, 
@@ -19,7 +20,8 @@ export const propiedades = [
         estado: "En alquiler", 
         precio: 2500, 
         caracteristicas: "60 m2 2 dorm. 1 baño", 
-        imagen: depSanIsidro1 
+        imagen: depSanIsidro1,
+        destacado: true
     },
     { 
         id: 3, 
@@ -28,7 +30,8 @@ export const propiedades = [
         estado: "En alquiler", 
         precio: 4000, 
         caracteristicas: "110 m2 2 dorm. 2 baños 1 estacionamiento", 
-        imagen: depBarranco1 
+        imagen: depBarranco1,
+        destacado: false
     }, 
     { 
         id: 4,
@@ -37,7 +40,8 @@ export const propiedades = [
         estado: "En alquiler", 
         precio: 6000, 
         caracteristicas: "120 m2 3 dorm. 2 baños 2 estacionamiento", 
-        imagen: depSurco1 
+        imagen: depSurco1,
+        destacado: false
     } 
 ]; 
 
