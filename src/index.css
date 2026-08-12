@@ -43,21 +43,3 @@ li a.active {
     background-color: var(--color-fondo-hover);
     font-weight: bold;
 }
-
-button{
-  color: var(--color-fuente-principal);
-  border-radius: 5px;
-  font-size: 1.1rem;
-  background-color: var(--color-fondo-boton);
-  border: var(--color-fondo-boton);
-  width: 100px;
-  height: 40px;
-  cursor: pointer;
-  transition: all 0.2s ease;
-}
-
-button:hover, button:active{
-  color: var(--color-fuente-secundaria);
-  font-weight: bold;
-  background-color: var(--color-fuente-principal);
-}

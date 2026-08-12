@@ -1,0 +1,17 @@
+button{
+    color: var(--color-fuente-principal);
+    border-radius: 5px;
+    font-size: 1.1rem;
+    background-color: var(--color-fondo-boton);
+    border: var(--color-fondo-boton);
+    width: fit-content;
+    padding: 10px 20px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+button:hover, button:active{
+    color: var(--color-fuente-secundaria);
+    background-color: var(--color-fuente-principal);
+}

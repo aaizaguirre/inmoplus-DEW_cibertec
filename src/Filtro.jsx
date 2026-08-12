@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import Button from '../src/components/Button'
 
 
 function Filtro({onBuscar}){
@@ -33,8 +34,8 @@ function Filtro({onBuscar}){
     return(
         <form onSubmit = {manejarBusqueda}>
             <div id="contenedor-btns">
-                <button type = "button">Alquilar</button>
-                <button type = "button">Comprar</button>
+                <Button texto = "Alquilar"></Button>
+                <Button texto = "Vender"></Button>
             </div>
 
             <div id="contenedor-filtros">
@@ -74,7 +75,7 @@ function Filtro({onBuscar}){
                         onChange = {(e) => setPrecioMax(e.target.value)}
                     />
                 </div>
-                <button type = "submit">Buscar</button>
+                <Button texto = "Buscar" accion = "submit"></Button>
             </div>
         </form>
     )
