@@ -4,7 +4,8 @@ import depBarranco1 from '../assets/dep-barranco1.jpg'
 import depSurco1 from '../assets/dep-surco1.jpg'
 
 export const propiedades = [ 
-    { id: 1, 
+    { 
+        id: 1, 
         titulo: "Calle San Martín Cdra. 8 - Miraflores, Lima",
         distrito: "Miraflores", 
         estado: "En alquiler", 

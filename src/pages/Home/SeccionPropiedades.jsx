@@ -1,5 +1,6 @@
 import React from 'react';
-import './SeccionPropiedades.css'
+import PropiedadCard from '../../components/PropiedadCard';
+import './SeccionPropiedades.css';
 
 function SeccionPropiedades({ propiedades }) {
 
@@ -14,20 +15,11 @@ function SeccionPropiedades({ propiedades }) {
             ) : (
                 <div id="contenedor-propiedades">
                     {propiedades.map((propiedad) => (
-                        <article className="tarjeta-propiedad" key={propiedad.id}>
-                            <img src={propiedad.imagen} alt={propiedad.titulo}/>
-                            <h3>{propiedad.titulo}</h3>
-                            <p>{propiedad.estado}</p>
-                            <p>
-                                {propiedad.caracteristicas}
-                            </p>
-                            <p>
-                                S/. {propiedad.precio.toLocaleString("es-PE", {
-                                    minimumFractionDigits: 2,
-                                    maximumFractionDigits: 2
-                                })}
-                            </p>
-                        </article>
+                        <PropiedadCard 
+                            key={propiedad.id} 
+                            propiedad={propiedad}
+                            onVerDetalle={(id) => console.log("Ir a detalle de:", id)}
+                        />
                     ))}
                 </div>
             )}

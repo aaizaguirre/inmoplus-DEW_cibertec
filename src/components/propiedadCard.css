@@ -1,0 +1,59 @@
+.card-propiedad {
+    overflow: hidden;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    background-color: var(--color-fondo);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    cursor: pointer;
+}
+
+.card-propiedad:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+}
+
+.card-propiedad img {
+    width: 100%;
+    height: 240px;
+    object-fit: cover;
+    display: block;
+}
+
+.texto{
+    padding: 20px;
+}
+
+.texto .titulo{
+    margin: 0 0 15px;
+    text-align: center;
+    font-size: 1.15rem;
+    font-weight: 600;
+    line-height: 1.4;
+    min-height: 2.8em;
+}
+
+.texto .estado{
+    margin: 0 0 8px;
+    font-size: 0.95rem;
+    font-weight: 600;
+}
+
+.texto .distrito{
+    margin: 0 0 15px;
+    font-size: 0.95rem;
+}
+
+.texto .caracteristicas {
+    margin: 0 0 15px;
+    font-size: 0.9rem;
+}
+
+.texto .precio {
+    margin: 0;
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+.texto .precio span {
+    font-size: 1.2rem;
+}
