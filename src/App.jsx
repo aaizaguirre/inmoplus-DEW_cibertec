@@ -9,6 +9,7 @@ import SeccionFiltro from './pages/Home/SeccionFiltro.jsx'
 import SeccionNosotros from './pages/Home/SeccionNosotros.jsx'
 import SeccionPropiedades from './pages/Home/SeccionPropiedades.jsx'
 import Footer from './components/Footer.jsx'
+import DepartamentosDestacados from './pages/Home/DepartamentosDestacados.jsx';
 
 function App() { 
   
@@ -52,6 +53,7 @@ function App() {
       {!buscando && <SeccionNosotros />} 
       {buscando && ( <SeccionPropiedades propiedades={resultados}/> 
       )} 
+      <DepartamentosDestacados/>
       <Footer/>
     </> 
   ); 

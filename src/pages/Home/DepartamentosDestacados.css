@@ -1,0 +1,12 @@
+.contenedor-destacados {
+    width: 90%;
+    max-width: 1400px;
+    margin: 60px auto;
+}
+
+.grid-propiedades {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    width: 100%;
+}
