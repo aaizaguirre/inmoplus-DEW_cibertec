@@ -11,8 +11,12 @@ import SeccionPropiedades from './pages/Home/SeccionPropiedades.jsx'
 import SeccionTestimonios from './components/SeccionTestimonios.jsx';
 import Footer from './components/Footer.jsx'
 import DepartamentosDestacados from './pages/Home/DepartamentosDestacados.jsx';
+import Vender from './pages/vender/vender.jsx';
+import Confirmacion from './pages/vender/Confirmacion.jsx';
 
 function App() { 
+
+  const [vista, setVista] = useState("inicio");
   
   const [buscando, setBuscando] = useState(false); 
   const [resultados, setResultados] = useState([]); 
@@ -46,19 +50,35 @@ function App() {
     setBuscando(true); 
   }; 
   
-  return ( 
-    <> 
-      <Navbar/> 
-      <Hero/> 
-      <SeccionFiltro onBuscar={buscarPropiedades}/> 
-      {!buscando && <SeccionNosotros />} 
-      {buscando && ( <SeccionPropiedades propiedades={resultados}/> 
-      )} 
-      <DepartamentosDestacados/>
-      <SeccionTestimonios/>
-      <Footer/>
-    </> 
-  ); 
-} 
+return (
+    <>
+      <Navbar
+        vista={vista}
+        onInicio={() => setVista("inicio")}
+        onVender={() => setVista("vender")}
+      />
+
+      {vista === "vender" ? (
+        <Vender onConfirmar={() => setVista("confirmacion")} />
+      ) : vista === "confirmacion" ? (
+        <Confirmacion />
+      ) : (
+        <>
+          <Hero />
+          <SeccionFiltro onBuscar={buscarPropiedades} />
+          {!buscando && <SeccionNosotros />}
+          {buscando && (
+            <SeccionPropiedades propiedades={resultados} />
+          )}
+          <DepartamentosDestacados />
+          <SeccionTestimonios />
+        </>
+      )}
+
+      <Footer />
+    </>
+  );
+}
+
 
 export default App;

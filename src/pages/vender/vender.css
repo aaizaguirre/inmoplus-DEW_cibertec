@@ -1,0 +1,204 @@
+#vender {
+    width: 100%;
+}
+
+.vender-hero {
+    padding: 90px 8%;
+    background-color: #ffffff;
+}
+
+.vender-hero-contenido {
+    max-width: 700px;
+}
+
+.vender-hero h1 {
+    font-size: 42px;
+    line-height: 1.15;
+    color: #0b3558;
+    margin: 0 0 20px 0;
+    font-weight: 600;
+    transition: transform 0.3s ease;
+}
+
+.vender-hero h1:hover {
+    transform: translateY(-6px) scale(1.03);
+}
+
+.vender-hero p {
+    font-size: 17px;
+    line-height: 1.6;
+    color: #555;
+    margin: 40px 0 30px 0;
+}
+
+.vender-hero button {
+    background-color: #0b3558;
+    color: white;
+    border: none;
+    padding: 15px 25px;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    border-radius: 4px;
+    margin-top: 30px;
+}
+
+.vender-hero button:hover {
+    background-color: #174f7d;
+}
+.experiencia {
+    padding: 50px 8%;
+}
+
+.experiencia h2 {
+    color: #0b3558;
+    font-size: 35px;
+    margin-bottom: 30px;
+    transition: transform 0.3s ease;
+}
+
+.experiencia h2:hover {
+    transform: translateY(-6px) scale(1.03);
+}
+
+.experiencia-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px 70px;
+}
+
+.experiencia-card {
+    border: 1px solid #999;
+    padding: 15px;
+    min-height: 100px;
+    transition: transform 0.3s ease;
+}
+
+.experiencia-card:hover {
+    transform: translateY(-8px) scale(1.05);
+}
+
+.experiencia-card h3 {
+    font-size: 16px;
+    margin: 0 0 10px;
+    color: #222;
+}
+
+.experiencia-card p {
+    font-size: 13px;
+    line-height: 1.4;
+    margin: 0;
+    color: #444;
+}
+/* VENTAS CONCRETADAS */
+
+.ventas-concretadas {
+    padding: 60px 8%;
+}
+
+.ventas-concretadas h2 {
+    font-size: 35px;
+    color: #0b3558;
+    margin-bottom: 40px;
+    transition: transform 0.3s ease;
+}
+
+.ventas-concretadas h2:hover {
+    transform: translateY(-6px) scale(1.03);
+}
+
+.ventas-grid {
+    display: grid;
+    grid-template-columns: 186px 186px;
+    column-gap: 500px;
+    row-gap: 25px;
+}
+
+.venta-card {
+    max-width: 278px;
+}
+
+.venta-card img {
+    width: 430px;
+    height: 230px;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.venta-card img:hover {
+    transform: translateY(-8px) scale(1.05);
+}
+
+.venta-card h3 {
+    font-size: 18px;
+    color: #111;
+    margin: 12px 0 10px;
+    white-space: nowrap;
+}
+
+.venta-card strong {
+    font-size: 13px;
+    color: #333;
+}
+
+.venta-card p {
+    font-size: 13px;
+    color: #555;
+    line-height: 1.4;
+    margin-top: 8px;
+    width: 400px;
+}
+
+.boton-tasar {
+    margin-top: 35px;
+    background-color: #0b3558;
+    color: white;
+    border: none;
+    padding: 15px 25px;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    border-radius: 4px;
+}
+.contacto-inmueble {
+    padding: 50px 8%;
+}
+
+.contacto-inmueble h2 {
+    font-size: 32px;
+    color: #0b3558;
+    margin-bottom: 15px;
+    transition: transform 0.3s ease;
+}
+
+.contacto-inmueble h2:hover {
+    transform: translateY(-6px) scale(1.03);
+}
+
+.contacto-inmueble p {
+    font-size: 13px;
+    margin-bottom: 30px;
+}
+
+.contacto-inmueble label {
+    display: block;
+    font-size: 13px;
+    margin-top: 20px;
+    margin-bottom: 8px;
+}
+
+.contacto-inmueble input {
+    display: block;
+    width: 250px;
+    height: 30px;
+}
+
+.contacto-inmueble button {
+    margin-top: 35px;
+    background-color: #0b3558;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    font-size: 12px;
+}
