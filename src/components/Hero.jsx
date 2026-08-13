@@ -1,4 +1,4 @@
-import {useState} from "react";
+import {React, useState} from "react";
 import './Hero.css';
 
 import departamento1 from '../assets/departamento1.jpg'
@@ -6,9 +6,9 @@ import departamento2 from '../assets/departamento2.jpg'
 import departamento3 from '../assets/departamento3.jpg'
 import departamento4 from '../assets/departamento4.jpg'
 
-const imagenes = [departamento1, departamento2, departamento3, departamento4];
+const imagenesHome = [departamento1, departamento2, departamento3, departamento4];
 
-function Hero(){
+function Hero({imagenes = imagenesHome, titulo = "Tu próxima casa, hoy", subtitulo = ""}){
 
     const [actual, setActual] = useState(0);
     
@@ -29,7 +29,8 @@ function Hero(){
                 ❮
             </button>
             <div className = "hero-contenido">
-                <h2>Tu próxima casa, hoy</h2>
+                <h2>{titulo}</h2>
+                <p>{subtitulo}</p>
             </div>
             <button className="flecha derecha" onClick={siguiente}>
                 ❯
