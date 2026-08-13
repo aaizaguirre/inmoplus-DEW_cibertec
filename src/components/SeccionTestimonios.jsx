@@ -23,6 +23,8 @@ function SeccionTestimonios(){
     }, []);
 
     useEffect(() => {
+        if (testimonios.length === 0) return;
+
         const intervalo = setInterval(() => {
             setIndiceActual((prevIndice) => {
                 if (prevIndice + cantTarjetas >= testimonios.length){
@@ -33,7 +35,7 @@ function SeccionTestimonios(){
         }, 5000);
 
         return () => clearInterval(intervalo);
-    }, []);
+    }, [testimonios.length]);
 
     const testimoniosVisibles = testimonios.slice(indiceActual, indiceActual + cantTarjetas);
 
@@ -45,7 +47,7 @@ function SeccionTestimonios(){
                 <p>Conoce la opinión de nuestros clientes</p>
             </div>
             
-            <div className = "grid-testimonios">
+            <div className = "grid-testimonios" key = {indiceActual}>
                 {testimoniosVisibles.map((item) => (
                     <article key = {item.id} className = "card-testimonio">
                         <p className = "comentario">
