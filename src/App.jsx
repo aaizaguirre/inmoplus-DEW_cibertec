@@ -9,6 +9,7 @@ import Footer from './components/Footer.jsx'
 import Home from './pages/Home/Home.jsx'
 import Vender from './pages/vender/vender.jsx';
 import Confirmacion from './pages/vender/Confirmacion.jsx';
+import Nosotros from './pages/Nosotros/Nosotros.jsx';
 
 function App() { 
 
@@ -28,6 +29,7 @@ function App() {
         <Route path="/" element={<Home todasLasPropiedades={todasLasPropiedades} />} />
         <Route path="/vender" element={<Vender />} />
         <Route path="/confirmacion" element={<Confirmacion />} />
+        <Route path = "/nosotros" element = {<Nosotros/>}/>
       </Routes>
 
       <Footer />
