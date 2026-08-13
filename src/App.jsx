@@ -1,7 +1,6 @@
-import { useState } from 'react'
-
-import './App.css'
-import { propiedades } from '../src/data/propiedades.jsx';
+import { useState, useEffect } from 'react';
+import { getPropiedades, filtrarPropiedades } from '../src/services/propiedadesService.js';
+import './App.css';
 
 import Navbar from './components/Navbar.jsx'
 import Hero from './components/Hero.jsx'
@@ -17,38 +16,19 @@ import Confirmacion from './pages/vender/Confirmacion.jsx';
 function App() { 
 
   const [vista, setVista] = useState("inicio");
+  const [todasLasPropiedades, setTodasLasPropiedades] = useState([]);
+  const [resultados, setResultados] = useState(null);
+
+  useEffect(() => {
+    getPropiedades()
+      .then(setTodasLasPropiedades)
+      .catch((err) => console.error("Error al cargar propiedades:", err));
+  }, []);
   
-  const [buscando, setBuscando] = useState(false); 
-  const [resultados, setResultados] = useState([]); 
   const buscarPropiedades = (filtros) => { 
-    const resultadosFiltrados = propiedades.filter((propiedad) => { 
-
-      const coincideEstado = 
-      !filtros.tipoOperacion || propiedad.estado === filtros.tipoOperacion;
-
-      const coincideDistrito = 
-      filtros.distrito === "" || 
-      propiedad.distrito === filtros.distrito; 
-      
-      const coincidePrecioMin = 
-      filtros.precioMin === "" || 
-      propiedad.precio >= Number(filtros.precioMin); 
-      
-      const coincidePrecioMax = 
-      filtros.precioMax === "" || 
-      propiedad.precio <= Number(filtros.precioMax); 
-      
-      return ( 
-        coincideEstado &&
-        coincideDistrito && 
-        coincidePrecioMin && 
-        coincidePrecioMax 
-      ); 
-    }); 
-    
-    setResultados(resultadosFiltrados); 
-    setBuscando(true); 
-  }; 
+    const filtrados = filtrarPropiedades(todasLasPropiedades, filtros);
+    setResultados(filtrados); 
+  };
   
 return (
     <>
@@ -66,9 +46,10 @@ return (
         <>
           <Hero />
           <SeccionFiltro onBuscar={buscarPropiedades} />
-          {!buscando && <SeccionNosotros />}
-          {buscando && (
+          {resultados ? (
             <SeccionPropiedades propiedades={resultados} />
+          ) : (
+            <SeccionNosotros />
           )}
           <DepartamentosDestacados />
           <SeccionTestimonios />

@@ -1,0 +1,82 @@
+{
+    "propiedades" : [ 
+        { 
+            "id": 1, 
+            "titulo": "Calle San Martín Cdra. 8 - Miraflores, Lima",
+            "distrito": "Miraflores", 
+            "estado": "En alquiler", 
+            "precio": 5100, 
+            "caracteristicas": "150 m2 3 dorm. 2 baños estacionamiento", 
+            "imagen": "./src/assets/dep-miraflores1.jpg",
+            "destacado": true
+        }, 
+        { 
+            "id": 2, 
+            "titulo": "Av. Juan de Arona 110 - San Isidro, Lima", 
+            "distrito": "San Isidro", 
+            "estado": "En alquiler", 
+            "precio": 2500, 
+            "caracteristicas": "60 m2 2 dorm. 1 baño", 
+            "imagen": "./src/assets/dep-san isidro1.jpg",
+            "destacado": true
+        },
+        { 
+            "id": 3, 
+            "titulo": "Jr. Sáenz Peña - Barranco, Lima", 
+            "distrito": "Barranco", 
+            "estado": "En alquiler", 
+            "precio": 4000, 
+            "caracteristicas": "110 m2 2 dorm. 2 baños 1 estacionamiento", 
+            "imagen": "./src/assets/dep-barranco1.jpg",
+            "destacado": false
+        }, 
+        { 
+            "id": 4,
+            "titulo": "Av. Circunvalación 148 - Surco, Lima",
+            "distrito": "Surco", 
+            "estado": "En alquiler", 
+            "precio": 6000, 
+            "caracteristicas": "120 m2 3 dorm. 2 baños 2 estacionamiento", 
+            "imagen": "./src/assets/dep-surco1.jpg",
+            "destacado": false
+        } 
+    ],
+    "testimonios" : [
+        {
+            "id": 1,
+            "nombre": "Juan Pérez",
+            "cargo": "Médico",
+            "comentario": "Excelente servicio. Me ayudaron a encontrar el departamento de mis sueños."
+        },
+        {
+            "id": 2,
+            "nombre": "Isabella Cerna",
+            "cargo": "Diseñadora de interiores",
+            "comentario": "Muy profesionales y atentos. Me asesoraron durante todo el proceso."
+        },
+        {
+            "id": 3,
+            "nombre": "Jimena Mendoza",
+            "cargo": "Astronauta",
+            "comentario": "Atención rápida y personalizada. Me ayudaron a encontrar un hogar con todo lo que buscaba."
+        },
+        {
+            "id": 4,
+            "nombre": "Manuel López",
+            "cargo": "Propietario",
+            "comentario": "Me ayudaron a vender mi inmueble de manera rápida y segura. Los recomiendo."
+        },
+        {
+            "id": 5,
+            "nombre": "Mario Gómez",
+            "cargo": "Arrendador",
+            "comentario": "Facilitan todo el proceso de alquiler, no tengo que preocuparme por nada. Super confiables."
+        },
+        {
+            "id": 6,
+            "nombre": "Margarita Proaño",
+            "cargo": "Propietaria",
+            "comentario": "Vendí mi propiedad en tiempo récord. No tuve que preocuparme ni del papeleo."
+        }
+    ]
+}

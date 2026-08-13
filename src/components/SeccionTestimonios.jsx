@@ -1,12 +1,26 @@
 import React, { useState, useEffect } from 'react';
-import { testimonios } from '../data/Testimonios';
+import { getTestimonios } from '../services/testimoniosService';
 import './SeccionTestimonios.css';
 
 function SeccionTestimonios(){
 
     const cantTarjetas = 3;
 
+    const [testimonios, setTestimonios] = useState([]);
     const [indiceActual, setIndiceActual] = useState(0);
+    const [cargando, setCargando] = useState(true);
+
+    useEffect(() => {
+        getTestimonios()
+        .then((data) => {
+            setTestimonios(data);
+            setCargando(false);
+        })
+        .catch((err) => {
+            console.error("Error cargando testimonios:", err);
+            setCargando(false);
+        });
+    }, []);
 
     useEffect(() => {
         const intervalo = setInterval(() => {

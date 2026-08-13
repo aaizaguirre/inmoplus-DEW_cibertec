@@ -1,7 +1,7 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Button from '../../components/Button';
 import './SeccionFiltro.css';
-import { distritos } from '../../data/propiedades';
+import { getPropiedades } from '../../services/propiedadesService';
 
 
 function SeccionFiltro({onBuscar}){
@@ -10,6 +10,21 @@ function SeccionFiltro({onBuscar}){
     const [distrito, setDistrito] = useState("");
     const [precioMin, setPrecioMin] = useState(""); 
     const [precioMax, setPrecioMax] = useState("");
+
+    const [distritosLista, setDistritosLista] = useState([]);
+
+    useEffect(() => {
+        getPropiedades()
+            .then((data) => {
+                const distritosLimpios = data
+                .map((p) => p.distrito)
+                .filter((distrito) => distrito && distrito.trim() !== "");
+
+                const distritosUnicos = [...new Set(distritosLimpios)].sort();
+                setDistritosLista(distritosUnicos);
+            })
+            .catch((error) => console.error("Error al cargar distritos:", error));
+    }, []);
 
     const manejarBusqueda = (e) => {
         e.preventDefault();
@@ -45,9 +60,9 @@ function SeccionFiltro({onBuscar}){
                         <option 
                         value="">Selecciona un distrito</option>
 
-                        {distritos.map((distrito) => (
-                            <option key={distrito} value={distrito}>
-                                {distrito}
+                        {distritosLista.map((itemDistrito, index) => (
+                            <option key={`${itemDistrito}-${index}`} value={itemDistrito}>
+                                {itemDistrito}
                             </option>
                         ))}
                 </select>
