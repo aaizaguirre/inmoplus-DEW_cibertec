@@ -2,7 +2,7 @@ import React from 'react';
 import './Navbar.css';
 import logoInmoPlus from '../assets/logo-InmoPlus.PNG';
 
-function Navbar(){
+function Navbar({ vista, onInicio, onVender }){
 
     return(
         <header>
@@ -12,12 +12,42 @@ function Navbar(){
             </div>
 
             <ul id = "navbar">
-                {/* TODO: Actualizar los 'href' luego de implementar las páginas */}
-                <li><a className = "active" href = "#">INICIO</a></li>
-                <li><a href = "#">COMPRAR</a></li>
-                <li><a href = "#">ALQUILAR</a></li>
-                <li><a href = "#">VENDER</a></li>
-                <li><a href = "#">NOSOTROS</a></li>
+                <li>
+        <a
+            className={vista === "inicio" ? "active" : ""}
+            href="#"
+            onClick={(e) => {
+                e.preventDefault();
+                onInicio();
+            }}
+        >
+            INICIO
+        </a>
+    </li>
+
+    <li>
+        <a href="#">COMPRAR</a>
+    </li>
+
+    <li>
+        <a href="#">ALQUILAR</a>
+    </li>
+
+    <li>
+        <a
+            href="#"
+            onClick={(e) => {
+                e.preventDefault();
+                onVender();
+            }}
+        >
+            VENDER
+        </a>
+    </li>
+
+    <li>
+        <a href="#">NOSOTROS</a>
+    </li>
             </ul>
         </header>
     )
