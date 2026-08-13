@@ -1,53 +1,47 @@
 import React from 'react';
-import './Navbar.css';
+import { NavLink, Link } from 'react-router-dom';
 import logoInmoPlus from '../assets/logo-InmoPlus.PNG';
+import './Navbar.css';
 
-function Navbar({ vista, onInicio, onVender }){
+function Navbar(){
 
     return(
         <header>
-            <div id = "contenedor-logo">
-                <img id = "logo-img" src = {logoInmoPlus} alt = "Logo InmoPlus" />
-                <p id = "logo-titulo">INMOPLUS PERÚ</p>
-            </div>
+            <Link to="/" id="contenedor-logo">
+                <img id="logo-img" src={logoInmoPlus} alt="Logo InmoPlus" />
+                <p id="logo-titulo">INMOPLUS PERÚ</p>
+            </Link>
 
-            <ul id = "navbar">
+            <ul id="navbar">
                 <li>
-        <a
-            className={vista === "inicio" ? "active" : ""}
-            href="#"
-            onClick={(e) => {
-                e.preventDefault();
-                onInicio();
-            }}
-        >
-            INICIO
-        </a>
-    </li>
+                    <NavLink to="/" end>
+                    INICIO
+                    </NavLink>
+                </li>
 
-    <li>
-        <a href="#">COMPRAR</a>
-    </li>
+                <li>
+                    <NavLink to="/comprar">
+                        COMPRAR
+                    </NavLink>
+                </li>
 
-    <li>
-        <a href="#">ALQUILAR</a>
-    </li>
+                <li>
+                    <NavLink to="/alquilar">
+                        ALQUILAR
+                    </NavLink>
+                </li>
 
-    <li>
-        <a
-            href="#"
-            onClick={(e) => {
-                e.preventDefault();
-                onVender();
-            }}
-        >
-            VENDER
-        </a>
-    </li>
+                <li>
+                    <NavLink to="/vender">
+                        VENDER
+                    </NavLink>
+                </li>
 
-    <li>
-        <a href="#">NOSOTROS</a>
-    </li>
+                <li>
+                    <NavLink to="/nosotros">
+                        NOSOTROS
+                    </NavLink>
+                </li>
             </ul>
         </header>
     )

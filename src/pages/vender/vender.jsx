@@ -1,6 +1,10 @@
+import { useNavigate } from 'react-router-dom';
 import './vender.css';
 
-function Vender({ onConfirmar }) {
+function Vender() {
+
+    const navigate = useNavigate();
+
     return (
         <section id="vender">
 
@@ -159,7 +163,7 @@ function Vender({ onConfirmar }) {
     <label>Tipo de propiedad (dpto, casa, etc.):</label>
     <input type="text" />
 
-    <button onClick={onConfirmar}>
+    <button onClick={() => navigate('/confirmacion')}>
         ENVIAR MI SOLICITUD GRATUITA
     </button>
 
