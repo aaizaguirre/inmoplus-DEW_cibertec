@@ -1,0 +1,12 @@
+#Paginacion {
+    display: flex;
+}
+.PagFlecha {
+    border: 1px #444444;
+    background-color: darkblue;
+    font: white; /*font-family*/
+}
+.PagNumero {
+    border: 1px #444444;
+    font: darkblue; /*font-family*/
+}

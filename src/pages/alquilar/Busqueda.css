@@ -1,0 +1,13 @@
+#FiltrosMayores {
+    display: flex;
+    justify-content: space-evenly;
+}
+#FiltrosMenores {
+    display: flex;
+    justify-content: space-evenly;
+}
+#ordenar {
+    background-color: #222222;
+    font: white; /*font-family*/
+    border-radius: 2px;
+}

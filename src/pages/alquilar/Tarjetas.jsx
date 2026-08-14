@@ -8,18 +8,23 @@ import iconoCama from '../../assets/iconoCama.jpg';
 import fechaPub from '../../assets/fechaPub.jpg';
 */
 
-function Alquilar() {
+function Tarjetas() {
+
+    // Datos dinámicos de tarjetas según búsqueda
+    // Datos dinámicos de tarjetas según paginación
+    // Enlace de Whatsapp y Telefóno
+
     return (
         <>
             <section>
                 <div id='Bloques'>
                     <div className='Bloque'>
-                        <img src="" alt="" />
+                        <img src=""/>
                         <article>
                             <div className='DetallesGenerales'>
                                 <div className='DetallesEspec1'>
-                                    <p>S/10,000</p>
-                                    <p>Chacarilla, San Borja</p>
+                                    <p className='Precio'>S/10,000</p>
+                                    <p className='Ubicacion'>Chacarilla, San Borja</p>
                                     <div className='DetallesNumericos'>
                                         <img className='IconoEspec' src="{iconoCasa}" />
                                         <p>3,000 m²</p>
@@ -30,15 +35,19 @@ function Alquilar() {
                                     </div>
                                 </div>
                                 <div className='Iconos'>
-                                    <img className='IconoSocial' src="{telefono}" alt="" />
-                                    <img className='IconoSocial' src="{email}" alt="" />
+                                    <a href="tel:980245029">
+                                        <img className='IconoSocial' src={telefono} alt="" />
+                                    </a>
+                                    <a href="mailto:contact@inmoplus.com" >
+                                        <img className='IconoSocial' src={email} alt="" />
+                                    </a>
                                 </div>
                             </div>
                             <div className='DetallesEspec2'>
-                                <img src=""/>
-                                <p>Jessica Bienes Raíces</p>
-                                <img src="{fechaPub}"/>
-                                <p>Publicado 18 julio, 2026</p>
+                                <img className='IconosEspecc' src=""/>
+                                <p className='DetEspec'>Jessica Bienes Raíces</p>
+                                <img className='IconosEspecc' src="{fechaPub}"/>
+                                <p className='DetEspec'>Publicado 18 julio, 2026</p>
                             </div>
                         </article>
                     </div>
@@ -59,8 +68,12 @@ function Alquilar() {
                                     </div>
                                 </div>
                                 <div className='Iconos'>
-                                    <img className='IconoSocial' src="{telefono}" alt="" />
-                                    <img className='IconoSocial' src="{email}" alt="" />
+                                    <a href="tel:980245029">
+                                        <img className='IconoSocial' src={telefono} alt="" />
+                                    </a>
+                                    <a href="mailto:contact@inmoplus.com" >
+                                        <img className='IconoSocial' src={email} alt="" />
+                                    </a>
                                 </div>
                             </div>
                             <div className='DetallesEspec2'>
@@ -88,8 +101,12 @@ function Alquilar() {
                                     </div>
                                 </div>
                                 <div className='Iconos'>
-                                    <img className='IconoSocial' src="{telefono}" alt="" />
-                                    <img className='IconoSocial' src="{email}" alt="" />
+                                    <a href="tel:980245029">
+                                        <img className='IconoSocial' src={telefono} alt="" />
+                                    </a>
+                                    <a href="mailto:contact@inmoplus.com" >
+                                        <img className='IconoSocial' src={email} alt="" />
+                                    </a>
                                 </div>
                             </div>
                             <div className='DetallesEspec2'>
@@ -117,8 +134,12 @@ function Alquilar() {
                                     </div>
                                 </div>
                                 <div className='Iconos'>
-                                    <img className='IconoSocial' src="{telefono}" alt="" />
-                                    <img className='IconoSocial' src="{email}" alt="" />
+                                    <a href="tel:980245029">
+                                        <img className='IconoSocial' src={telefono} alt="" />
+                                    </a>
+                                    <a href="mailto:contact@inmoplus.com" >
+                                        <img className='IconoSocial' src={email} alt="" />
+                                    </a>
                                 </div>
                             </div>
                             <div className='DetallesEspec2'>
@@ -134,4 +155,4 @@ function Alquilar() {
         </>
     )
 }
-export default Alquilar;
+export default Tarjetas;

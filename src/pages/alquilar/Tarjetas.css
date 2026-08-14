@@ -1,0 +1,44 @@
+#Bloques {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.Bloque {
+    display: flex;
+    border-radius: 5px;
+}
+.DetallesGenerales {
+    display: flex;
+}
+.Precio {
+    font: medium black; /*font-family*/
+}
+.Ubicacion {
+    font: smaller gray; /*font-family*/
+}
+.DetallesNumericos {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.Iconos {
+    display: flex;
+    justify-content: space-between;
+}
+.IconoSocial {
+    width: 10%;
+    border-radius: 7px;
+}
+.DestallesEspec2 {
+    display: flex;
+    justify-content: space-evenly;
+}
+.IconosEspecc {
+    width: 5%;
+    border: 1px black;
+    border-radius: 7px;
+}
+.DetEspec {
+    font: smaller #777777 Montserrat; /*font-family*/
+}
