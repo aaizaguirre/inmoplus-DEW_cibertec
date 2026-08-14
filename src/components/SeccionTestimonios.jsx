@@ -1,14 +1,30 @@
 import React, { useState, useEffect } from 'react';
-import { testimonios } from '../data/Testimonios';
+import { getTestimonios } from '../services/testimoniosService';
 import './SeccionTestimonios.css';
 
 function SeccionTestimonios(){
 
     const cantTarjetas = 3;
 
+    const [testimonios, setTestimonios] = useState([]);
     const [indiceActual, setIndiceActual] = useState(0);
+    const [cargando, setCargando] = useState(true);
 
     useEffect(() => {
+        getTestimonios()
+        .then((data) => {
+            setTestimonios(data);
+            setCargando(false);
+        })
+        .catch((err) => {
+            console.error("Error cargando testimonios:", err);
+            setCargando(false);
+        });
+    }, []);
+
+    useEffect(() => {
+        if (testimonios.length === 0) return;
+
         const intervalo = setInterval(() => {
             setIndiceActual((prevIndice) => {
                 if (prevIndice + cantTarjetas >= testimonios.length){
@@ -19,7 +35,7 @@ function SeccionTestimonios(){
         }, 5000);
 
         return () => clearInterval(intervalo);
-    }, []);
+    }, [testimonios.length]);
 
     const testimoniosVisibles = testimonios.slice(indiceActual, indiceActual + cantTarjetas);
 
@@ -31,7 +47,7 @@ function SeccionTestimonios(){
                 <p>Conoce la opinión de nuestros clientes</p>
             </div>
             
-            <div className = "grid-testimonios">
+            <div className = "grid-testimonios" key = {indiceActual}>
                 {testimoniosVisibles.map((item) => (
                     <article key = {item.id} className = "card-testimonio">
                         <p className = "comentario">

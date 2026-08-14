@@ -1,0 +1,93 @@
+.contenedor-mision-vision {
+    display: flex;
+    justify-content: center;
+    gap: 80px;
+    max-width: 1100px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+.card-mision-vision {
+    background-color: var(--color-fuente-principal); 
+    color: var(--color-fuente-secundaria);
+    padding: 40px 30px;
+    border-radius: 25px; 
+    flex: 1;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.card-mision-vision h2 {
+    font-size: 2.2rem;
+    margin-bottom: 20px;
+    letter-spacing: 2px;
+}
+
+.card-mision-vision p {
+    font-size: 1.05rem;
+    line-height: 1.6;
+    color: var(--color-fuente-secundaria);
+}
+
+.contenedor-valores {
+    max-width: 1100px;
+    margin: 60px auto;
+    padding: 0 20px;
+}
+
+.valores-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.valores-header h2 {
+    font-size: 2.5rem;
+    color: var(--color-fuente-principal); 
+    margin: 0;
+    letter-spacing: 2px;
+}
+
+.valores-header h3 {
+    font-size: 1.6rem;
+    color: var(--color-fuente-principal); 
+    font-weight: 400;
+    margin-top: 5px;
+}
+
+.valores-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    align-items: start;
+}
+
+.valor-columna h4 {
+    color: var(--color-fuente-principal); 
+    font-size: 1.3rem;
+    text-align: center;
+    margin-bottom: 25px;
+    min-height: 50px; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.valor {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    margin-bottom: 20px;
+}
+
+.valor .check {
+    font-size: 1.3rem;
+    color: var(--color-fuente-principal); 
+    line-height: 1;
+}
+
+.valor p {
+    margin: 0;
+    font-size: 0.95rem;
+    color: var(--color-fuente-principal); 
+    line-height: 1.5;
+}

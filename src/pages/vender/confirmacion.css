@@ -1,0 +1,63 @@
+.confirmacion {
+    min-height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 60px 8%;
+    background-color: #ffffff;
+}
+
+.confirmacion-contenido {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.check-circulo {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: #28a745;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.confirmacion h1 {
+    color: #0b3558;
+    font-size: 32px;
+    line-height: 1.3;
+    margin: 0 0 15px;
+}
+
+.confirmacion p {
+    color: #555;
+    font-size: 16px;
+    margin: 0;
+}
+
+.check {
+    font-size: 60px;
+    font-weight: bold;
+    display: inline-block;
+    animation: florecer 1.5s ease-in-out infinite;
+}
+@keyframes florecer {
+    0% {
+        transform: scale(0.6);
+        opacity: 0.4;
+    }
+
+    50% {
+        transform: scale(1.15);
+        opacity: 1;
+    }
+
+    100% {
+        transform: scale(0.6);
+        opacity: 0.4;
+    }
+}

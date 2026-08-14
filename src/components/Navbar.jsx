@@ -1,23 +1,47 @@
 import React from 'react';
-import './Navbar.css';
+import { NavLink, Link } from 'react-router-dom';
 import logoInmoPlus from '../assets/logo-InmoPlus.PNG';
+import './Navbar.css';
 
 function Navbar(){
 
     return(
         <header>
-            <div id = "contenedor-logo">
-                <img id = "logo-img" src = {logoInmoPlus} alt = "Logo InmoPlus" />
-                <p id = "logo-titulo">INMOPLUS PERÚ</p>
-            </div>
+            <Link to="/" id="contenedor-logo">
+                <img id="logo-img" src={logoInmoPlus} alt="Logo InmoPlus" />
+                <p id="logo-titulo">INMOPLUS PERÚ</p>
+            </Link>
 
-            <ul id = "navbar">
-                {/* TODO: Actualizar los 'href' luego de implementar las páginas */}
-                <li><a className = "active" href = "#">INICIO</a></li>
-                <li><a href = "#">COMPRAR</a></li>
-                <li><a href = "#">ALQUILAR</a></li>
-                <li><a href = "#">VENDER</a></li>
-                <li><a href = "#">NOSOTROS</a></li>
+            <ul id="navbar">
+                <li>
+                    <NavLink to="/" end>
+                    INICIO
+                    </NavLink>
+                </li>
+
+                <li>
+                    <NavLink to="/comprar">
+                        COMPRAR
+                    </NavLink>
+                </li>
+
+                <li>
+                    <NavLink to="/alquilar">
+                        ALQUILAR
+                    </NavLink>
+                </li>
+
+                <li>
+                    <NavLink to="/vender">
+                        VENDER
+                    </NavLink>
+                </li>
+
+                <li>
+                    <NavLink to="/nosotros">
+                        NOSOTROS
+                    </NavLink>
+                </li>
             </ul>
         </header>
     )

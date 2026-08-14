@@ -1,64 +1,40 @@
-import { useState } from 'react'
-
-import './App.css'
-import { propiedades } from '../src/data/propiedades.jsx';
+import { useState, useEffect } from 'react';
+import { Routes, Route } from 'react-router-dom';
+import { getPropiedades, filtrarPropiedades } from '../src/services/propiedadesService.js';
+import './App.css';
 
 import Navbar from './components/Navbar.jsx'
-import Hero from './components/Hero.jsx'
-import SeccionFiltro from './pages/Home/SeccionFiltro.jsx'
-import SeccionNosotros from './pages/Home/SeccionNosotros.jsx'
-import SeccionPropiedades from './pages/Home/SeccionPropiedades.jsx'
-import SeccionTestimonios from './components/SeccionTestimonios.jsx';
 import Footer from './components/Footer.jsx'
-import DepartamentosDestacados from './pages/Home/DepartamentosDestacados.jsx';
+
+import Home from './pages/Home/Home.jsx'
+import Vender from './pages/vender/vender.jsx';
+import Confirmacion from './pages/vender/Confirmacion.jsx';
+import Nosotros from './pages/Nosotros/Nosotros.jsx';
 
 function App() { 
-  
-  const [buscando, setBuscando] = useState(false); 
-  const [resultados, setResultados] = useState([]); 
-  const buscarPropiedades = (filtros) => { 
-    const resultadosFiltrados = propiedades.filter((propiedad) => { 
 
-      const coincideEstado = 
-      !filtros.tipoOperacion || propiedad.estado === filtros.tipoOperacion;
+  const [todasLasPropiedades, setTodasLasPropiedades] = useState([]);
 
-      const coincideDistrito = 
-      filtros.distrito === "" || 
-      propiedad.distrito === filtros.distrito; 
-      
-      const coincidePrecioMin = 
-      filtros.precioMin === "" || 
-      propiedad.precio >= Number(filtros.precioMin); 
-      
-      const coincidePrecioMax = 
-      filtros.precioMax === "" || 
-      propiedad.precio <= Number(filtros.precioMax); 
-      
-      return ( 
-        coincideEstado &&
-        coincideDistrito && 
-        coincidePrecioMin && 
-        coincidePrecioMax 
-      ); 
-    }); 
-    
-    setResultados(resultadosFiltrados); 
-    setBuscando(true); 
-  }; 
+  useEffect(() => {
+    getPropiedades()
+      .then(setTodasLasPropiedades)
+      .catch((err) => console.error("Error al cargar propiedades:", err));
+  }, []);
   
-  return ( 
-    <> 
-      <Navbar/> 
-      <Hero/> 
-      <SeccionFiltro onBuscar={buscarPropiedades}/> 
-      {!buscando && <SeccionNosotros />} 
-      {buscando && ( <SeccionPropiedades propiedades={resultados}/> 
-      )} 
-      <DepartamentosDestacados/>
-      <SeccionTestimonios/>
-      <Footer/>
-    </> 
-  ); 
-} 
+  return (
+      <>
+      <Navbar />
+
+      <Routes>
+        <Route path="/" element={<Home todasLasPropiedades={todasLasPropiedades} />} />
+        <Route path="/vender" element={<Vender />} />
+        <Route path="/confirmacion" element={<Confirmacion />} />
+        <Route path = "/nosotros" element = {<Nosotros/>}/>
+      </Routes>
+
+      <Footer />
+    </>
+    );
+}
 
 export default App;

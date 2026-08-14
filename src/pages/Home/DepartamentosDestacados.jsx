@@ -1,11 +1,26 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import PropiedadCard from '../../components/PropiedadCard';
 import './DepartamentosDestacados.css';
-import { propiedades } from '../../data/propiedades';
+import { getPropiedades } from '../../services/propiedadesService';
 
 function DepartamentosDestacados(){
 
-    const destacados = propiedades.filter(propiedad => propiedad.destacado)
+    const [propiedades, setPropiedades] = useState([]);
+    const [cargando, setCargando] = useState(true);
+
+    useEffect(() => {
+        getPropiedades()
+            .then((data) => {
+                setPropiedades(data);
+                setCargando(false);
+            })
+            .catch((error) => {
+                console.error("Error al cargar departamentos destacados:", error);
+                setCargando(false);
+            });
+    }, []);
+
+    const destacados = propiedades.filter(propiedad => propiedad.destacado);
 
     return(
 

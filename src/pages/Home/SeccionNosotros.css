@@ -4,6 +4,7 @@
     width: 100%;
     margin: 20px auto;
     justify-content: center;
+    align-items: center;
     gap: 40px;
 }
 
@@ -13,9 +14,21 @@
     align-items: center;  
     justify-content: center;
     gap: 30px;
+    text-align: center;
+    max-width: 500px;
+}
+
+#contenedor-frase h2 {
+    margin: 0;
+}
+
+#contenedor-frase p {
+    margin: 0;
+    line-height: 1.6;
 }
 
 #contenedor-imagen img{
     border-radius: 5px;
     height: 40vh;
+    object-fit: cover;
 }
