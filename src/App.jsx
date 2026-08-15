@@ -10,6 +10,7 @@ import Footer from './components/Footer.jsx';
 
 import Home from './pages/Home/Home.jsx';
 import Comprar from './pages/Comprar/Comprar.jsx';
+import Alquilar from './pages/alquilar/Alquilar.jsx';
 import Vender from './pages/vender/vender.jsx';
 import Confirmacion from './pages/vender/Confirmacion.jsx';
 import Nosotros from './pages/Nosotros/Nosotros.jsx';
@@ -38,6 +39,11 @@ function App() {
   <Route
     path="/comprar"
     element={<Comprar propiedades={todasLasPropiedades} />}
+  />
+  
+  <Route
+    path="/alquilar"
+    element={<Alquilar propiedades={todasLasPropiedades} />}
   />
 
   <Route path="/vender" element={<Vender />} />
