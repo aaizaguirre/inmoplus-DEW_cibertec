@@ -1,10 +1,5 @@
 import './Tarjetas.css';
 
-// Todos los íconos viven incrustados aquí mismo, como componentes SVG.
-// Así el proyecto no depende de archivos externos en /assets, y se
-// elimina cualquier posibilidad de conflicto de tamaño con CSS global
-// o de referencias rotas dentro del propio archivo .svg.
-
 function IconoCasa({ className }) {
     return (
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
@@ -72,8 +67,6 @@ function IconoCorreo({ className }) {
     );
 }
 
-// Extrae m², dormitorios y baños del string "caracteristicas" del db.json
-// Ej: "150 m2 3 dorm. 2 baños estacionamiento"
 function parsearCaracteristicas(texto = '') {
     const metros = texto.match(/(\d+)\s*m2/i);
     const dormitorios = texto.match(/(\d+)\s*dorm/i);
@@ -87,10 +80,6 @@ function parsearCaracteristicas(texto = '') {
 }
 
 function Tarjetas({ propiedades }) {
-
-    // Datos dinámicos de tarjetas según búsqueda
-    // Datos dinámicos de tarjetas según paginación
-    // Enlace de Whatsapp y Telefóno
 
     if (!propiedades || propiedades.length === 0) {
         return (

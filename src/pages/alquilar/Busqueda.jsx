@@ -81,8 +81,6 @@ function Busqueda() {
                         type="text"
                         name='busqUbicacion'
                         placeholder='Ubicación'
-                        /*value={ }
-                        onChange={ }*/
                     />
                 </div>
 
@@ -104,8 +102,6 @@ function Busqueda() {
                         name="propiedad"
                         id="propiedad"
                         defaultValue=""
-                        /*value={ }
-                        onChange={ }*/
                     >
                         <option value="" disabled>Propiedad</option>
                         <option value="departamento">Departamento</option>
@@ -120,8 +116,6 @@ function Busqueda() {
                         name="precio"
                         id="precio"
                         defaultValue=""
-                        /*value={ }
-                        onChange={ }*/
                     >
                         <option value="" disabled>Precio</option>
                         <option value="0-2000">Hasta S/2,000</option>
@@ -218,8 +212,6 @@ function Busqueda() {
                     name="ordenar"
                     id="ordenar"
                     defaultValue=""
-                    /*value={ }
-                    onChange={ }*/
                 >
                     <option value="" disabled>Ordenar</option>
                     <option value="recientes">Más recientes</option>

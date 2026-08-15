@@ -1,12 +1,48 @@
+#PaginacionContenedor {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 40px 0;
+  font-family: "Montserrat", sans-serif;
+}
+
 #Paginacion {
-    display: flex;
+  display: flex;
+  align-items: center;
 }
-.PagFlecha {
-    border: 1px #444444;
-    background-color: darkblue;
-    font: white; /*font-family*/
-}
+
+.PagFlecha,
 .PagNumero {
-    border: 1px #444444;
-    font: darkblue; /*font-family*/
+  width: 40px;
+  height: 40px;
+  border: 1px solid #c7d0e0;
+  background-color: white;
+  color: #12294f;
+  cursor: pointer;
+  font-size: 16px;
+  transition: 0.3s;
+}
+
+.PagFlecha:hover,
+.PagNumero:hover {
+  background-color: #f6f8fc;
+}
+
+.Activa {
+  background-color: #12294f;
+  color: white;
+}
+
+.PagFlecha:first-child {
+  border-radius: 6px 0 0 6px;
+}
+
+.PagFlecha:last-child {
+  border-radius: 0 6px 6px 0;
+}
+
+.PagTexto {
+  margin-top: 12px;
+  font-size: 14px;
+  color: #666;
 }
